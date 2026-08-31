@@ -1,0 +1,3990 @@
+/* =========================================================
+   CHRONIQUES LIGÉRIENNES — STYLE GÉNÉRAL
+   ========================================================= */
+
+:root {
+    --blue: #10069F;
+    --blue-dark: #0B0475;
+    --text: #222222;
+    --text-light: #666666;
+    --background: #fafaf8;
+    --white: #ffffff;
+    --border: #e4e4e1;
+}
+
+/* =========================================================
+   ARTICLE « AUTORITÉ ET AUTONOMIE »
+   ========================================================= */
+
+.authority-spectrum,
+.authority-quote {
+    width: 850px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.authority-spectrum {
+    margin-top: 52px;
+    margin-bottom: 68px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.authority-spectrum-labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.authority-spectrum-line {
+    position: relative;
+    height: 2px;
+    margin: 18px 0 16px;
+    background: linear-gradient(to right, var(--text-light), var(--blue));
+}
+
+.authority-spectrum-line i {
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--background);
+    border-radius: 50%;
+    background-color: var(--blue);
+    transform: translateY(-50%);
+    transition: right 0.35s ease;
+}
+
+.authority-spectrum:hover .authority-spectrum-line i {
+    right: 8%;
+}
+
+.authority-spectrum p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 15px;
+    font-style: italic;
+}
+
+.authority-article a {
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration-color: currentColor;
+    text-underline-offset: 3px;
+}
+
+.authority-quote {
+    margin-top: 48px;
+    margin-bottom: 32px;
+    padding: 25px 0 25px 28px;
+    border-left: 4px solid var(--blue);
+    color: var(--blue);
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+.authority-quote strong {
+    font-weight: 700;
+}
+
+.js .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.js .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .authority-spectrum {
+        margin-top: 38px;
+        margin-bottom: 50px;
+    }
+
+    .authority-spectrum-labels {
+        font-size: 10px;
+    }
+
+    .authority-quote {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+}
+
+
+/* ===== STYLE GÉNÉRAL ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Logos */
+
+.header-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 50px;
+}
+
+.header-logos img {
+    width: auto;
+    object-fit: contain;
+}
+
+/* ISEFAC */
+.header-logos img:nth-child(1) {
+    max-height: 115px;
+}
+
+/* Région */
+.header-logos img:nth-child(2) {
+    max-height: 80px;
+}
+
+/* Chroniques Ligériennes */
+.header-logos img:nth-child(3) {
+    max-height: 115px;
+}
+
+/* Navigation */
+
+/* =========================================================
+   HEADER — NAVIGATION
+   ========================================================= */
+
+/* =========================
+   MENU PRINCIPAL
+   ========================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.main-nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Séparateurs */
+.main-nav a:not(:last-child) {
+    border-right: 1px solid rgba(34, 34, 34, 0.45);
+}
+
+/* Ligne sous le lien */
+.main-nav a::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: -8px;
+    height: 1px;
+    background-color: #10069F;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+/* Survol */
+.main-nav a:hover {
+    color: #10069F;
+    transform: translateY(-2px) scale(1.06);
+}
+.main-nav a:hover::before {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+   ÉLÉMENTS COMMUNS
+   ========================================================= */
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: var(--blue);
+    margin: 0 0 18px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   HERO — ACCUEIL
+   ========================================================= */
+
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 550px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transform: scale(1.02);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 850px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: clamp(48px, 6vw, 72px);
+    line-height: 1.05;
+    margin: 0 0 25px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 0 auto 35px;
+    max-width: 650px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: white;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    background-color: var(--blue);
+    color: white;
+}
+
+/* =========================================================
+   INTRODUCTION — ACCUEIL
+   ========================================================= */
+
+.introduction {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 50px;
+}
+
+/* =========================
+   TEXTE
+   ========================= */
+
+.introduction-text {
+    flex: 1;
+    max-width: 520px;
+}
+
+.introduction-text h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 25px;
+}
+
+.introduction-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+/* Petit label */
+
+.introduction-label {
+    margin: 0 0 12px;
+
+    color: #10069F;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.introduction-image {
+    flex: 1;
+    max-width: 450px;
+}
+
+.introduction-image img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    display: block;
+}
+
+/* =========================
+   LIGNE ENTRE TEXTE ET IMAGE
+   ========================= */
+
+.introduction-line {
+    position: absolute;
+
+    top: 50%;
+    left: calc(50% - 40px);
+
+    width: 80px;
+    height: 1px;
+
+    background-color: #10069F;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.8s ease 0.3s;
+}
+
+.introduction.visible .introduction-line {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   ARTICLES — ACCUEIL
+   ========================================================= */
+
+.latest-articles {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 50px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.featured-article {
+    margin-bottom: 30px;
+}
+
+.featured-article a {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.featured-article img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.featured-article:hover img {
+    transform: scale(1.025);
+}
+
+.featured-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-category {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+.featured-content h3 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+
+.featured-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.featured-content span,
+.article-card span,
+.article-wide-content span {
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--blue);
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================================
+   PETITES CARTES ARTICLES
+   ========================================================= */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.article-card {
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--white);
+    overflow: hidden;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.article-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.article-card:hover img {
+    transform: scale(1.03);
+}
+
+.article-card-content {
+    padding: 30px;
+}
+
+.article-card-content h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+
+/* =========================================================
+   ARTICLE HORIZONTAL
+   ========================================================= */
+
+.article-wide {
+    margin-bottom: 50px;
+}
+
+.article-wide a {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    color: var(--text);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.article-wide-image {
+    overflow: hidden;
+}
+
+.article-wide-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.article-wide:hover img {
+    transform: scale(1.03);
+}
+
+.article-wide-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-wide-content h3 {
+    font-size: 28px;
+    line-height: 1.3;
+    margin: 0 0 15px;
+}
+
+
+/* =========================================================
+   BOUTON ARTICLES
+   ========================================================= */
+
+.all-articles-button {
+    text-align: center;
+}
+
+.all-articles-button a {
+    display: inline-block;
+    padding: 13px 28px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.all-articles-button a:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   CHIFFRES CLÉS
+   ========================================================= */
+
+.numbers {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 50px;
+}
+
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.number-item {
+    text-align: center;
+    padding: 25px 10px;
+    border-top: 2px solid #d9d9d5;
+    transition: border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.number-item strong {
+    display: block;
+    font-size: 52px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.number-item span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+.number-item:hover {
+    border-top: 4px solid var(--blue);
+    transform: translateY(-3px);
+}
+
+.number-item:hover strong {
+    color: var(--blue);
+}
+
+.personal-number {
+    border-top-color: var(--blue);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-title h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.footer-title p {
+    margin: 0;
+    color: #aaa;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #7fc5f2;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 18px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+/* =========================================================
+   PAGE PORTFOLIO
+   ========================================================= */
+
+.portfolio-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 50px 60px;
+}
+
+.portfolio-intro h1 {
+    max-width: 850px;
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 25px;
+}
+
+.portfolio-intro > p:last-child {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+.portfolio-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 50px 90px;
+}
+
+.portfolio-section-title {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.portfolio-section-title h2 {
+    font-size: 42px;
+    margin: 0 0 20px;
+}
+
+.portfolio-section-title > p:last-child {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.portfolio-project {
+    margin-bottom: 90px;
+}
+
+.portfolio-project-header {
+    margin-bottom: 28px;
+}
+
+.portfolio-project-header p {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.portfolio-project-header h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: white;
+    overflow: hidden;
+}
+
+.portfolio-item.large {
+    grid-row: span 2;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-item.large img {
+    height: 580px;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.03);
+}
+
+.portfolio-caption {
+    padding: 20px 5px 10px;
+}
+
+.portfolio-caption h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.portfolio-caption p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.document-preview {
+    height: 280px;
+    background: #f0f0ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item.large .document-preview {
+    height: 580px;
+}
+
+.document-preview span {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 12px 18px;
+}
+
+.document-preview:hover {
+    background-color: #e8eef2;
+}
+
+.portfolio-small-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.field-section {
+    max-width: 1200px;
+}
+
+.field-gallery {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+.field-photo {
+    overflow: hidden;
+}
+
+.field-photo.large {
+    grid-row: span 2;
+}
+
+.field-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.field-photo:hover img {
+    transform: scale(1.04);
+}
+
+.personal-section {
+    padding-bottom: 110px;
+}
+
+.personal-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.personal-photo img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.personal-photo:hover img {
+    transform: scale(1.02);
+}
+
+.personal-photo p {
+    margin-top: 15px;
+    color: #555;
+}
+
+
+/* =========================================================
+   PAGE À PROPOS
+   ========================================================= */
+
+.about-intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 90px 50px 60px;
+}
+
+.about-intro h1 {
+    max-width: 850px;
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.about-presentation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 50px 100px;
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 45px;
+    align-items: start;
+}
+.about-text {
+    max-width: 720px;
+}
+
+.about-photo img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-text h2 {
+    font-size: 34px;
+    margin: 0 0 30px;
+}
+
+.about-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: var(--text);
+}
+
+.about-signature {
+    margin-top: 30px;
+}
+
+.about-section-title {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 50px;
+}
+
+.about-section-title h2 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.about-timeline {
+    padding: 70px 0 100px;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.timeline-item {
+    border-top: 2px solid var(--blue);
+    padding-top: 20px;
+}
+
+.timeline-item span {
+    color: var(--blue);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.timeline-item h3 {
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.timeline-item p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.about-conclusion {
+    text-align: center;
+    padding: 60px 25px 100px;
+}
+
+.about-conclusion h2 {
+    font-size: 42px;
+    margin: 0 0 30px;
+}
+
+.about-button {
+    display: inline-block;
+    padding: 13px 28px;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: var(--blue);
+    color: white;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TÉLÉPHONE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .header-logos {
+        padding: 15px 20px;
+    }
+
+    .header-logos img {
+        max-height: 42px;
+    }
+
+    header nav {
+        gap: 18px;
+        padding: 8px 10px 15px;
+        flex-wrap: nowrap;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+
+    /* Accueil */
+
+    .introduction {
+        flex-direction: column;
+        gap: 45px;
+        padding: 70px 25px;
+    }
+
+    .introduction-image {
+        max-width: 100%;
+    }
+
+    .latest-articles,
+    .numbers {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .featured-article a,
+    .article-wide a {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-article img {
+        height: 300px;
+    }
+
+    .featured-content {
+        padding: 30px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .numbers-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .number-item strong {
+        font-size: 40px;
+    }
+
+
+    /* Pages */
+
+    .portfolio-intro,
+    .about-intro {
+        padding: 70px 25px 50px;
+    }
+
+    .portfolio-intro h1,
+    .about-intro h1 {
+        font-size: 40px;
+    }
+
+    .articles-list,
+    .portfolio-section {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .article-page-card a {
+        grid-template-columns: 1fr;
+    }
+
+    .article-page-image img {
+        height: 260px;
+    }
+
+    .article-page-content {
+        padding: 30px;
+    }
+
+    .article-page-content h2 {
+        font-size: 26px;
+    }
+
+
+    /* Portfolio */
+
+    .portfolio-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-item.large {
+        grid-row: auto;
+    }
+
+    .portfolio-item.large img,
+    .portfolio-item.large .document-preview {
+        height: 300px;
+    }
+
+    .portfolio-small-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .field-gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+    }
+
+    .field-photo.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .personal-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .personal-photo img {
+        height: 350px;
+    }
+
+
+    /* About */
+
+    .about-presentation {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 30px 25px 70px;
+    }
+
+    .about-photo {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .about-section-title {
+        padding: 0 25px;
+    }
+
+    .about-section-title h2 {
+        font-size: 34px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+        padding: 0 25px;
+        gap: 35px;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+        padding: 45px 25px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   HERO ARTICLE
+======================================== */
+
+.article-hero {
+    width: 1100px;
+    max-width: calc(100% - 80px);
+
+    margin: 0 auto;
+
+    padding: 70px 0 55px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 400px;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* BLOC GAUCHE */
+
+.article-hero-text {
+    width: 100%;
+    max-width: 640px;
+
+    margin: 0 auto;
+}
+
+
+/* TITRE */
+
+.article-hero h1 {
+    margin: 0;
+
+    max-width: 640px;
+
+    font-size: clamp(44px, 5vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -2.3px;
+
+    font-weight: 700;
+}
+
+
+/* VIDÉO */
+
+.article-video {
+    width: 400px;
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+.article-video video {
+    display: block;
+
+    width: 100%;
+
+    max-height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+/* ========================================
+   EN-TÊTE ÉDITORIAL DE L'ARTICLE
+======================================== */
+
+.article-meta {
+    width: min(980px, 100%);
+    margin: 0 auto 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* ========================================
+   CORPS DE L'ARTICLE — CENTRÉ
+======================================== */
+
+.article-content {
+
+    width: min(1100px, calc(100% - 100px));
+
+    margin: 0 auto;
+
+}
+
+
+/* Bloc de lecture centré */
+
+.article-content > p,
+.article-opening,
+.article-content h2,
+.article-section,
+.seanergy-timeline,
+.article-quote {
+
+    width: min(850px, 100%);
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* Texte aligné à gauche */
+
+.article-content > p,
+.article-opening p,
+.article-section p {
+
+    text-align: left;
+
+}
+
+
+/* Paragraphes */
+
+.article-content > p {
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 1.75;
+
+}
+
+
+/* Introduction */
+
+.article-opening {
+
+    margin-bottom: 35px;
+
+}
+
+.article-opening p {
+
+    margin: 0 0 16px;
+
+    font-size: 18px;
+    line-height: 1.75;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .article-meta {
+        width: 100%;
+        margin-bottom: 30px;
+
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .article-content {
+        width: calc(100% - 44px);
+    }
+
+}
+
+/* ========================================
+   TITRE
+======================================== */
+
+.article-hero-text {
+    min-width: 0;
+     width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.article-hero .section-label {
+    margin-bottom: 15px;
+}
+
+.article-hero h1 {
+    margin: 0;
+    max-width: 800px;
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -2.3px;
+    font-weight: 700;
+}
+
+
+/* ========================================
+   VIDÉO
+======================================== */
+
+.article-video {
+    width: 100%;
+    align-self: center;
+}
+
+.article-video video {
+    display: block;
+    width: 100%;
+    max-height: 470px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* ========================================
+   CORPS DE L'ARTICLE — AXE CENTRAL
+======================================== */
+
+.article-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* Axe de lecture */
+
+.article-content > p,
+.article-content .article-opening,
+.article-content .article-section,
+.article-content h2,
+.article-content .seanergy-timeline,
+.article-content .article-quote {
+    width: 850px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Texte */
+
+.article-content > p,
+.article-content .article-opening p,
+.article-content .article-section p {
+    text-align: left;
+}
+
+
+/* Paragraphes */
+
+.article-content > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+/* Introduction */
+
+.article-opening {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.article-opening p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+/* Sections contenant du texte */
+
+.article-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* Timeline */
+
+.seanergy-timeline {
+    margin-top: 65px;
+    margin-bottom: 70px;
+}
+
+
+/* Citation */
+
+.article-quote {
+    margin-top: 40px;
+    margin-bottom: 45px;
+}
+/* ========================================
+   TITRES DE SECTIONS
+======================================== */
+
+.article-content strong {
+    font-weight: 700;
+}
+
+
+/* ========================================
+   PHRASE DE TRANSITION
+======================================== */
+
+/* ========================================
+   PHRASE DE TRANSITION
+======================================== */
+
+.article-highlight {
+    width: 850px !important;
+    max-width: calc(100% - 40px);
+
+    margin: 35px auto !important;
+
+    padding: 18px 0 18px 22px;
+
+    border-left: 4px solid var(--blue);
+
+    font-size: 19px !important;
+    line-height: 1.45 !important;
+    font-weight: 600;
+
+    text-align: left;
+}
+
+/* ========================================
+   RETOUR AUX CHRONIQUES
+======================================== */
+
+.article-back {
+    width: min(1250px, calc(100% - 100px));
+    margin: 70px auto 85px;
+}
+
+.article-back a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.article-back a:hover {
+    opacity: 0.6;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .article-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .article-video {
+        max-width: 700px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .article-hero {
+        width: calc(100% - 44px);
+        padding: 50px 0 35px;
+        gap: 30px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(40px, 11vw, 60px);
+        letter-spacing: -1.8px;
+    }
+
+
+    /* Vidéo */
+
+    .article-video {
+        max-width: 100%;
+    }
+
+    .article-video video {
+        max-height: 350px;
+    }
+
+
+    /* Texte */
+
+    .article-content {
+        width: calc(100% - 44px);
+    }
+
+    .article-content > p,
+    .article-opening,
+    .article-content h2 {
+        width: 100%;
+    }
+
+    .article-opening p,
+    .article-content > p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+    .article-content h2 {
+        margin-top: 42px;
+        margin-bottom: 18px;
+        font-size: 28px;
+    }
+
+
+    /* Transition */
+
+    .article-highlight {
+        width: 100% !important;
+        margin: 25px 0 !important;
+        padding: 16px 0 16px 18px;
+        font-size: 18px !important;
+    }
+
+
+    /* Retour */
+
+    .article-back {
+        width: calc(100% - 44px);
+        margin: 55px auto 65px;
+    }
+
+}
+.article-section {
+    position: relative;
+}
+/* ========================================
+   TITRES DE SECTIONS - STYLE HANDMADE
+======================================== */
+
+.article-content h2 {
+    width: 850px;
+    max-width: calc(100% - 40px);
+
+    margin: 65px auto 25px;
+    color: var(--blue);
+
+    font-size: 58px;
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    position: relative;
+
+    transform: rotate(-1.5deg);
+}
+
+
+/* Sous-titre de la section */
+
+.article-content h2 span {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 25px;
+    line-height: 1.1;
+
+    letter-spacing: 0;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* Petit trait manuscrit */
+
+.article-content h2::after {
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 3px;
+
+    margin-top: 15px;
+
+    background-color: var(--blue);
+
+    transform: rotate(-3deg);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .article-content h2 {
+        width: 100%;
+
+        margin-top: 50px;
+
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+
+        transform: rotate(-1deg);
+    }
+
+
+    .article-content h2 span {
+        font-size: 20px;
+    }
+
+
+}
+/* ========================================
+   FACTS INTÉGRÉS DANS LE TEXTE
+======================================== */
+
+.article-fact {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.08em;
+}
+
+
+/* ========================================
+   TIMELINE — SEANERGY
+======================================== */
+
+.seanergy-timeline {
+    width: min(980px, 100%);
+    margin: 65px 0 70px;
+}
+
+.timeline-label {
+    margin: 0 0 35px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.seanergy-timeline-line {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+/* Ligne horizontale */
+
+.seanergy-timeline-line::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--blue);
+}
+
+/* Étapes */
+
+.seanergy-timeline-item {
+    position: relative;
+    padding-top: 30px;
+}
+
+/* Points */
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+    background-color: var(--blue);
+
+    z-index: 1;
+}
+
+/* Titres */
+
+.seanergy-timeline-item h3 {
+    margin: 0 0 8px;
+
+    color: var(--text);
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Informations */
+
+.seanergy-timeline-item p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CITATION — SEANERGY
+======================================== */
+
+.article-quote {
+    width: min(850px, 100%);
+    margin: 35px 0 40px;
+    padding: 20px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.article-quote p {
+    margin: 0;
+
+    color: var(--blue);
+
+    font-size: 23px;
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+/* ========================================
+   RESPONSIVE — TIMELINE + CITATION
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* Timeline */
+
+    .seanergy-timeline {
+        margin: 50px 0 55px;
+    }
+
+    .seanergy-timeline-line {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-left: 20px;
+    }
+
+    .seanergy-timeline-line::before {
+        top: 0;
+        bottom: 0;
+        left: 6px;
+
+        width: 1px;
+        height: auto;
+    }
+
+    .timeline-dot {
+        left: -1px;
+    }
+
+    /* Citation */
+
+    .article-quote {
+    margin: 30px 0 35px;
+    padding: 18px 10px;
+}
+
+.article-quote p {
+    font-size: 20px;
+}
+}
+.article-section p {
+    margin: 0 0 16px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+@media (max-width: 768px) {
+
+    .article-section p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+
+}
+/* =========================================================
+   ARTICLE — LE TRAVAIL, C'EST BIEN, L'ÉQUIPE, C'EST MIEUX
+   ========================================================= */
+
+
+/* ===== HERO PLUS HUMAIN ===== */
+
+.article-team-hero {
+    min-height: 430px;
+}
+
+.team-hero-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 260px;
+
+    color: var(--blue);
+
+    transform: rotate(2deg);
+}
+
+.team-note-symbol {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.team-hero-note p {
+    margin: 0;
+
+    font-size: 25px;
+    line-height: 1.15;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.team-note-line {
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    margin-top: 20px;
+
+    background-color: var(--blue);
+
+    transform: rotate(-4deg);
+}
+
+
+/* ===== PETITES RÉPLIQUES ===== */
+
+.team-dialogue {
+    width: min(650px, 100%);
+
+    margin: 8px 0 20px;
+
+    padding-left: 25px;
+
+    border-left: 2px solid var(--blue);
+
+    color: var(--blue);
+
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.team-dialogue p {
+    margin: 0;
+}
+
+
+/* ===== PHRASE IMPORTANTE ===== */
+
+.team-highlight {
+    margin-top: 30px !important;
+    margin-bottom: 45px !important;
+
+    color: var(--blue);
+
+    font-size: 23px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* ===== FACTS DANS LE TEXTE ===== */
+
+.team-fact {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+
+/* ===== CARNET DE BORD ===== */
+
+.movement-card {
+    width: min(980px, 100%);
+
+    margin: 45px 0;
+
+    padding: 30px 35px;
+
+    border-top: 1px solid var(--blue);
+    border-bottom: 1px solid var(--blue);
+
+    background-color: rgba(16, 6, 159, 0.025);
+}
+
+.movement-label {
+    margin: 0 0 25px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.movement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.movement-item {
+    padding-left: 18px;
+
+    border-left: 2px solid var(--blue);
+}
+
+.movement-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-size: 30px;
+    line-height: 1;
+}
+
+.movement-item span {
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.movement-conclusion {
+    margin: 25px 0 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+    font-style: italic;
+}
+
+
+/* ===== CONCLUSION ===== */
+
+.team-conclusion {
+    width: min(980px, 100%);
+
+    margin: 70px 0 20px;
+    padding: 35px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.team-conclusion-label {
+    margin: 0 0 22px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.team-conclusion-line {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.team-conclusion-line i {
+    display: block;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: var(--blue);
+
+    border-radius: 50%;
+}
+
+
+/* ===== ANIMATION LÉGÈRE ===== */
+
+.team-hero-note,
+.movement-card,
+.team-conclusion {
+    animation: teamAppear 0.8s ease both;
+}
+
+@keyframes teamAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .article-team-hero {
+        min-height: auto;
+    }
+
+    .team-hero-note {
+        min-height: 190px;
+    }
+
+    .team-note-symbol {
+        font-size: 34px;
+        margin-bottom: 12px;
+    }
+
+    .team-hero-note p {
+        font-size: 21px;
+    }
+
+    .team-highlight {
+        font-size: 20px !important;
+        margin-top: 25px !important;
+        margin-bottom: 35px !important;
+    }
+
+    .movement-card {
+        margin: 35px 0;
+        padding: 25px 20px;
+    }
+
+    .movement-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .movement-item strong {
+        font-size: 27px;
+    }
+
+    .team-conclusion {
+        margin-top: 55px;
+    }
+
+    .team-conclusion-line {
+        gap: 12px;
+        font-size: 11px;
+    }
+
+}
+/* ========================================
+   CARTE DCOM — ORGANISATION
+======================================== */
+
+.dcom-map {
+    width: min(1050px, 100%);
+    margin: 70px 0 80px;
+    padding: 55px 45px;
+    background-color: #f2f2ef;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Petite ligne décorative */
+
+.dcom-map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 4px;
+    background-color: var(--blue);
+}
+
+
+/* Introduction */
+
+.dcom-intro {
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.dcom-intro > span {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dcom-intro h2 {
+    margin: 0 0 18px;
+
+    font-size: 38px;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.dcom-intro p {
+    max-width: 500px;
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   ORGANISATION
+======================================== */
+
+.dcom-organisation {
+    position: relative;
+}
+
+
+/* Bloc central */
+
+.dcom-center {
+    width: 230px;
+    margin: 0 auto;
+    padding: 22px 25px;
+
+    background-color: var(--blue);
+    color: white;
+
+    text-align: center;
+}
+
+.dcom-center span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
+.dcom-center strong {
+    display: block;
+
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.dcom-center small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+
+/* Ligne verticale */
+
+.dcom-line {
+    width: 1px;
+    height: 40px;
+
+    margin: 0 auto;
+
+    background-color: var(--blue);
+}
+
+
+/* ========================================
+   CARTES MÉTIERS
+======================================== */
+
+.dcom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    position: relative;
+}
+
+
+/* Petite ligne horizontale au-dessus */
+
+.dcom-grid::before {
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+    left: 16.66%;
+    right: 16.66%;
+
+    height: 1px;
+
+    background-color: var(--blue);
+}
+
+
+/* Cartes */
+
+.dcom-card {
+    position: relative;
+
+    padding: 25px 22px 22px;
+
+    background-color: white;
+    border: 1px solid #deded9;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Petit point de connexion */
+
+.dcom-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    background-color: var(--blue);
+
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* Numéro */
+
+.dcom-card > span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* Nom */
+
+.dcom-card strong {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+
+/* Description */
+
+.dcom-card p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* Hover */
+
+.dcom-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--blue);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ========================================
+   NOTE FINALE
+======================================== */
+
+.dcom-note {
+    margin: 35px 0 0;
+
+    text-align: center;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.dcom-note strong {
+    color: var(--blue);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .dcom-map {
+        width: 100%;
+        margin: 50px 0 60px;
+        padding: 40px 20px;
+    }
+
+    .dcom-intro {
+        margin-bottom: 35px;
+    }
+
+    .dcom-intro h2 {
+        font-size: 32px;
+    }
+
+    .dcom-center {
+        width: 200px;
+    }
+
+    .dcom-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .dcom-grid::before {
+        display: none;
+    }
+
+    .dcom-card::before {
+        display: none;
+    }
+
+    .dcom-line {
+        height: 25px;
+    }
+
+}
+/* =========================================================
+   ANIMATION INTRODUCTION
+   ========================================================= */
+
+.introduction-text,
+.introduction-image {
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease;
+}
+
+/* État initial */
+.introduction:not(.visible) .introduction-text {
+    transform: translateX(-30px);
+    opacity: 0.2;
+}
+
+.introduction:not(.visible) .introduction-image {
+    transform: translateX(30px);
+    opacity: 0.2;
+}
+
+/* État visible */
+.introduction.visible .introduction-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.introduction.visible .introduction-image {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* =========================================================
+   À LIRE ENSUITE
+========================================================= */
+
+.related-articles {
+    width: min(1250px, calc(100% - 100px));
+
+    margin: 130px auto 40px;
+    padding-top: 55px;
+
+    border-top: 1px solid var(--text);
+}
+
+/* Titre */
+
+.related-articles-heading {
+    margin-bottom: 40px;
+}
+
+.related-articles-heading h2 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -1.8px;
+    font-weight: 700;
+}
+
+/* Grille */
+
+.related-articles-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   CARTE
+========================================================= */
+
+.related-article-card {
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--text);
+    text-decoration: none;
+
+    border: none;
+    border-top: 3px solid var(--text);
+
+    background-color: transparent;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.related-article-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--blue);
+
+    box-shadow: none;
+}
+
+
+/* Image */
+
+.related-article-image {
+    width: 100%;
+    height: 190px;
+
+    overflow: hidden;
+}
+
+.related-article-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.45s ease;
+}
+
+
+/* Contenu */
+
+.related-article-content {
+    padding: 20px 5px 24px;
+}
+
+.related-article-content .article-category {
+    margin: 0 0 10px;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+.related-article-content h3 {
+    margin: 0 0 18px;
+
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   DATE + DURÉE
+========================================================= */
+
+.related-article-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+}
+
+.related-article-meta span {
+    position: relative;
+}
+
+.related-article-meta span + span::before {
+    content: "";
+
+    position: absolute;
+
+    left: -10px;
+    top: 50%;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background-color: var(--blue);
+
+    transform: translateY(-50%);
+}
+
+
+/* Lien */
+
+.related-article-link {
+    color: var(--blue);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   SURVOL
+========================================================= */
+
+.related-article-card:hover {
+    border-color: var(--blue);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.related-article-card:hover .related-article-image img {
+    transform: scale(1.045);
+}
+
+.related-article-card:hover .related-article-link {
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .related-articles-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .article-meta {
+        flex-wrap: wrap;
+
+        gap: 12px 20px;
+
+        margin-top: 28px;
+    }
+
+    .article-title-line {
+        margin-top: 18px;
+    }
+
+ .related-articles {
+    width: calc(100% - 44px);
+
+    margin-top: 70px;
+
+    padding: 40px 20px 45px;
+}
+
+    .related-articles-heading h2 {
+        font-size: 36px;
+    }
+
+    .related-articles-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .related-article-image {
+        height: 210px;
+    }
+
+}
+/* ========================================
+   INFOS SOUS LE TITRE
+======================================== */
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    margin-top: 38px;
+}
+
+.article-meta strong {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.meta-icon {
+    width: 18px;
+    height: 18px;
+
+    color: var(--blue);
+
+    flex-shrink: 0;
+}
+
+.article-title-line {
+    width: 100%;
+
+    height: 1px;
+
+    margin-top: 20px;
+
+    background-color: var(--border);
+}
+/* =========================================================
+   CORRECTION VIDÉO ARTICLE — PRIORITÉ
+========================================================= */
+
+.article-hero .article-video {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.article-hero .article-video video {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 470px !important;
+    object-fit: cover !important;
+}
+/* ========================================
+   CORRECTION — TEXTE ARTICLE CENTRÉ
+======================================== */
+
+.article-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* Tous les paragraphes de l'article */
+
+.article-content > p,
+.article-content .article-opening,
+.article-content .article-section,
+.article-content .article-opening p {
+    width: 850px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Texte toujours aligné à gauche */
+
+.article-content > p,
+.article-content .article-opening p,
+.article-content .article-section p {
+    text-align: left;
+}
+
+
+/* Introduction */
+
+.article-opening {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.article-opening p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+/* =========================================================
+   CORRECTION FINALE — ALIGNEMENT HERO SEANERGY
+========================================================= */
+
+.article-hero {
+    width: min(1100px, calc(100% - 100px));
+    margin: 0 auto;
+    padding: 70px 0 55px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   BLOC TITRE
+========================= */
+
+.article-hero-text {
+    width: 100%;
+    max-width: 640px;
+    margin: 0;
+}
+
+
+/* Petit label */
+
+.article-hero .section-label {
+    margin: 0 0 15px;
+}
+
+
+/* Titre */
+
+.article-hero h1 {
+    width: 100%;
+    max-width: 640px;
+
+    margin: 0;
+
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -2.3px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   INFOS SOUS LE TITRE
+========================= */
+
+.article-hero .article-meta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 28px;
+
+    margin: 38px 0 0;
+}
+
+
+.article-hero .article-meta strong {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+
+.article-hero .article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+
+.article-hero .meta-icon {
+    width: 18px;
+    height: 18px;
+
+    color: var(--blue);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LIGNE SOUS LES INFOS
+========================= */
+
+.article-hero .article-title-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 20px 0 0;
+
+    background-color: var(--border);
+}
+
+
+/* =========================
+   VIDÉO
+========================= */
+
+.article-hero .article-video {
+    width: 400px !important;
+    max-width: 400px !important;
+
+    margin: 0 !important;
+
+    align-self: center;
+}
+
+
+.article-hero .article-video video {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    max-height: 470px !important;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .article-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .article-hero-text {
+        max-width: 100%;
+    }
+
+    .article-hero h1 {
+        max-width: 100%;
+    }
+
+    .article-hero .article-video {
+        width: 100% !important;
+        max-width: 700px !important;
+
+        margin: 0 auto !important;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .article-hero {
+        width: calc(100% - 44px);
+        padding: 50px 0 35px;
+        gap: 30px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(40px, 11vw, 60px);
+        letter-spacing: -1.8px;
+    }
+
+    .article-hero .article-meta {
+        margin-top: 28px;
+        gap: 12px 20px;
+    }
+
+    .article-hero .article-video {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .article-hero .article-video video {
+        max-height: 350px !important;
+    }
+
+}
+/* =========================================================
+   HERO SEANERGY — VIDÉO SOUS LE TITRE
+========================================================= */
+
+.article-hero {
+    width: min(900px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 70px 0 55px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   BLOC TITRE
+========================= */
+
+.article-hero-text {
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
+}
+
+
+/* Label */
+
+.article-hero .section-label {
+    margin: 0 0 15px;
+}
+
+
+/* Titre */
+
+.article-hero h1 {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0;
+
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -2.3px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   INFOS
+========================= */
+
+.article-hero .article-meta {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 28px;
+
+    margin: 38px 0 0;
+}
+
+
+.article-hero .article-meta strong {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+
+.article-hero .article-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+
+.article-hero .meta-icon {
+    width: 18px;
+    height: 18px;
+
+    color: var(--blue);
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LIGNE
+========================= */
+
+.article-hero .article-title-line {
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--border);
+}
+
+
+/* =========================
+   VIDÉO
+========================= */
+
+.article-hero .article-video {
+    width: 650px !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+}
+
+
+.article-hero .article-video video {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    max-height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .article-hero {
+        width: calc(100% - 44px);
+        padding: 50px 0 35px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(40px, 11vw, 60px);
+        letter-spacing: -1.8px;
+    }
+
+    .article-hero .article-meta {
+        margin-top: 28px;
+        gap: 12px 20px;
+    }
+
+    .article-hero .article-title-line {
+        margin-bottom: 30px;
+    }
+
+    .article-hero .article-video {
+        width: 100% !important;
+    }
+
+    .article-hero .article-video video {
+        max-height: 350px;
+    }
+
+}
+/* ========================================
+   ALIGNEMENT FINAL DU HERO
+======================================== */
+
+.article-hero {
+    width: 850px;
+    max-width: calc(100% - 40px);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: block;
+}
+
+/* Même axe que le texte de l'article */
+
+.article-hero-text {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+}
+
+/* Titre */
+
+.article-hero h1 {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+}
+
+/* Infos sous le titre */
+
+.article-hero .article-meta {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Ligne */
+
+.article-hero .article-title-line {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Vidéo */
+
+.article-hero .article-video {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 20px 0 0;
+}
+
+.article-hero .article-video video {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+/* =====================================================
+   ARTICLE ÉQUIPE — INTRO + ANIMATION CAFÉ
+===================================================== */
+
+.team-intro-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 70px;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.team-intro-text {
+    min-width: 0;
+}
+
+.team-hero-note {
+    width: 100%;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.team-note-symbol {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.team-hero-note p {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.35;
+    font-style: italic;
+}
+
+.team-note-line {
+    display: block;
+    width: 45px;
+    height: 1px;
+    margin: 20px auto 0;
+    background: currentColor;
+    opacity: 0.35;
+}
+
+
+/* =====================================================
+   DIALOGUES
+===================================================== */
+
+.team-dialogue {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.team-dialogue p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CE QUE JE RETIENS
+===================================================== */
+
+.team-conclusion {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 80px 0 20px;
+    padding: 45px 0;
+}
+
+.team-conclusion-label {
+    margin: 0 0 30px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.team-conclusion-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+}
+
+.team-conclusion-line span {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.team-conclusion-line i {
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+
+/* =====================================================
+   VERSION MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .team-intro-layout {
+        display: block;
+    }
+
+    .team-hero-note {
+    width: 100%;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    transform: translateY(-25px);
+}
+
+    .team-conclusion-line {
+        gap: 12px;
+    }
+
+    .team-conclusion-line span {
+        font-size: 1.2rem;
+    }
+}
+.team-conclusion {
+    margin: 20px 0 20px;
+}
+
+.team-conclusion-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.team-conclusion-line span {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.team-conclusion-line i {
+    width: 40px;
+    flex: 0.4;
+}
+/* INTRODUCTION ARTICLE ÉQUIPE */
+
+.article-team-content .article-opening,
+.article-team-content .team-dialogue,
+.article-team-content > p {
+    width: 100%;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* On garde les dialogues sur le même axe */
+.article-team-content .team-dialogue {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.article-team-content .team-dialogue p {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* INTRO + ANIMATION CAFÉ */
+
+.team-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    margin: 0 auto 20px;
+    max-width: 760px;
+}
+
+.team-intro-text {
+    flex: 1;
+}
+
+.team-intro .article-opening {
+    margin: 0;
+}
+
+/* Animation café */
+
+.team-intro .team-hero-note {
+    flex: 0 0 190px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transform: translateY(-5px);
+}
+
+.team-intro .team-note-symbol {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.team-intro .team-hero-note p {
+    margin: 0;
+    line-height: 1.15;
+}
+
+/* =====================================================
+   PAGE ARTICLES — MISE EN PAGE GÉOMÉTRIQUE
+   Même esprit que la page d'accueil
+===================================================== */
+
+
+/* =====================================================
+   INTRODUCTION
+===================================================== */
+
+.articles-intro {
+    width: min(1100px, calc(100% - 80px));
+    margin: 90px auto 55px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 255px;
+    gap: 70px;
+    align-items: end;
+}
+
+.articles-intro h1 {
+    max-width: 760px;
+    margin: 12px 0 22px;
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.articles-intro-lead {
+    max-width: 610px;
+    margin: 0;
+    color: var(--text-light);
+    font-size: 18px;
+    line-height: 1.65;
+}
+
+.articles-intro-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--blue);
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+}
+
+.articles-intro-cta span {
+    font-size: 19px;
+    transition: transform 0.25s ease;
+}
+
+.articles-intro-cta:hover span {
+    transform: translateY(4px);
+}
+
+.articles-intro-progress {
+    align-self: stretch;
+    padding: 12px 0 20px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-left: 1px solid var(--blue);
+}
+
+.articles-intro-count {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    color: var(--blue);
+}
+
+.articles-intro-count strong {
+    font-size: clamp(76px, 9vw, 116px);
+    line-height: 0.75;
+    letter-spacing: -0.09em;
+}
+
+.articles-intro-count span {
+    color: var(--text-light);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.articles-intro-progress p {
+    margin: 18px 0 22px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.articles-intro-markers {
+    display: flex;
+    gap: 7px;
+}
+
+.articles-intro-markers i {
+    width: 18px;
+    height: 5px;
+    border: 1px solid var(--blue);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.articles-intro-markers i:nth-child(-n + 6) {
+    background-color: var(--blue);
+}
+
+.articles-intro-progress:hover .articles-intro-markers i {
+    transform: translateY(-5px);
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(2) {
+    transition-delay: 0.04s;
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(3) {
+    transition-delay: 0.08s;
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(4) {
+    transition-delay: 0.12s;
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(5) {
+    transition-delay: 0.16s;
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(6) {
+    transition-delay: 0.2s;
+}
+
+.articles-intro-progress:hover .articles-intro-markers i:nth-child(7) {
+    transition-delay: 0.24s;
+}
+
+/* =====================================================
+   ARTICLE À LA UNE — SEANERGY
+===================================================== */
+
+.article-featured {
+    width: min(1100px, calc(100% - 80px));
+    margin: 0 auto 100px;
+}
+
+.article-featured-link {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    min-height: 360px;
+
+    text-decoration: none;
+    color: inherit;
+
+    overflow: hidden;
+}
+
+
+.article-featured-image {
+    overflow: hidden;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.article-featured-link:hover .article-featured-image img {
+    transform: scale(1.03);
+}
+
+
+.article-featured-content {
+    padding: 45px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.article-featured-content .article-number {
+    margin-bottom: 8px;
+}
+
+.article-featured-content .article-category {
+    margin-bottom: 15px;
+}
+
+
+.article-featured-content h2 {
+    margin: 0 0 20px;
+    line-height: 1.15;
+}
+
+
+.article-featured-description {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+
+.article-featured-meta {
+    display: flex;
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+    font-size: 0.85rem;
+    opacity: 0.65;
+}
+
+
+.article-featured-link > .article-featured-content > .article-featured-link {
+    display: inline-block;
+    width: fit-content;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   AUTRES CHRONIQUES
+===================================================== */
+
+.articles-others {
+    width: min(1100px, calc(100% - 80px));
+    margin: 0 auto 100px;
+}
+
+
+.articles-others-heading {
+    margin-bottom: 50px;
+}
+
+.articles-others-heading h2 {
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   CHRONIQUES À VENIR
+===================================================== */
+
+.articles-coming {
+    margin-top: 80px;
+    padding: 45px 0;
+
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+
+    text-align: center;
+}
+
+
+.articles-coming .section-label {
+    margin-bottom: 20px;
+}
+
+
+.coming-line {
+    display: none;
+}
+
+
+.coming-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+
+    margin: 25px 0;
+}
+
+
+.coming-items span {
+    padding: 0 35px;
+
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+}
+
+
+.coming-items span + span {
+    border-left: 1px solid currentColor;
+}
+
+
+.articles-coming > p:last-child {
+    margin: 0;
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .articles-intro,
+    .article-featured,
+    .articles-others {
+        width: calc(100% - 40px);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .articles-intro {
+        margin-top: 70px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .articles-intro h1 {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+    .articles-intro-lead {
+        font-size: 16px;
+    }
+
+    .articles-intro-progress {
+        min-height: 150px;
+        padding-left: 22px;
+    }
+
+    .articles-intro-count strong {
+        font-size: 62px;
+    }
+
+
+    .article-featured-link {
+        grid-template-columns: 1fr;
+    }
+
+
+    .article-featured-image img {
+        min-height: 250px;
+        height: 250px;
+    }
+
+
+    .article-featured-content {
+        padding: 35px 30px;
+    }
+
+
+    .article-featured-meta {
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+
+    .coming-items {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .coming-items span {
+        padding: 0;
+    }
+
+
+    .coming-items span + span {
+        border-left: none;
+    }
+
+}
