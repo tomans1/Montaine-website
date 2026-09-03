@@ -85,7 +85,7 @@
     margin-top: 48px;
     margin-bottom: 32px;
     padding: 25px 0 25px 28px;
-    border-left: 4px solid var(--blue);
+    border: 1px solid var(--blue);
     color: var(--blue);
     font-size: 26px;
     font-weight: 400;
@@ -137,7 +137,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--body, Arial, sans-serif);
     background-color: var(--background);
     color: var(--text);
     line-height: 1.5;
@@ -1624,7 +1624,7 @@ footer {
 
     padding: 18px 0 18px 22px;
 
-    border-left: 4px solid var(--blue);
+    border: 1px solid var(--border);
 
     font-size: 19px !important;
     line-height: 1.45 !important;

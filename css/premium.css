@@ -470,7 +470,7 @@ header.is-scrolled { box-shadow: 0 12px 35px rgba(17, 12, 55, 0.09); }
     line-height: 1;
 }
 .article-content h2 span { margin-top: 11px; font-family: var(--sans); font-size: 12px; letter-spacing: .16em; }
-.article-highlight { width: 740px !important; padding: 28px 30px; border: 0; border-left: 4px solid var(--blue); background: var(--paper-deep); }
+.article-highlight { width: 740px !important; padding: 28px 30px; border: 1px solid var(--line); background: var(--paper-deep); }
 .article-quote { padding: 42px; border-radius: 20px; background: var(--blue-dark); color: white; }
 .article-quote p { color: white; font-family: var(--display) !important; font-size: clamp(29px, 3vw, 42px) !important; line-height: 1.18 !important; }
 .related-articles { width: var(--page); max-width: 1240px; border-color: var(--border); }

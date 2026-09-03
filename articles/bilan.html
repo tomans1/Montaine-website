@@ -11,10 +11,12 @@
     <link rel="icon" href="../images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="../css/atelier.css">
     <script src="../js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 
     <!-- HEADER -->
 
@@ -25,7 +27,7 @@
         <img src="../images/logos/logo-stage.png" alt="Logo Chroniques Ligériennes">
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
         <a href="../index.html">ACCUEIL</a>
         <a href="../about.html">À PROPOS</a>
         <a href="../articles.html">ARTICLES</a>
@@ -34,7 +36,7 @@
 </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
         <!-- HERO -->
 
@@ -93,6 +95,10 @@
 
 <div class="article-title-line"></div>
             </div>
+
+            <figure class="article-hero-media">
+                <img src="../images/articles/bilan/bilan.jpg" alt="Vue lumineuse des locaux de la Région Pays de la Loire" width="2000" height="1500" fetchpriority="high" decoding="async">
+            </figure>
 
         </section>
 
@@ -521,7 +527,7 @@
             <div class="related-article-image">
 
                 <img
-                    src="../images/articles/seanergy/seanergy.png"
+                    src="../images/articles/seanergy/seanergy.jpg"
                     alt="Mon premier salon professionnel : cap sur Seanergy">
 
             </div>
@@ -557,7 +563,7 @@
             <div class="related-article-image">
 
                 <img
-                    src="../images/articles/DCOM/dcom.png"
+                    src="../images/articles/DCOM/dcom.jpg"
                     alt="Christophe Colomb de la DCOM">
 
             </div>
@@ -593,7 +599,7 @@
             <div class="related-article-image">
 
                 <img
-                    src="../images/articles/equipe/bike.png"
+                    src="../images/articles/equipe/bike.jpg"
                     alt="Le travail, c'est bien. L'équipe, c'est mieux.">
 
             </div>
@@ -647,7 +653,7 @@
                 <p>Un stage, des projets, des découvertes.</p>
             </div>
 
-            <nav class="footer-nav">
+            <nav class="footer-nav" aria-label="Navigation de pied de page">
                 <a href="../index.html">Accueil</a>
                 <a href="../about.html">À propos</a>
                 <a href="../articles.html">Articles</a>

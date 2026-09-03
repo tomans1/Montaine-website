@@ -12,10 +12,12 @@
     <link rel="icon" href="images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/atelier.css">
     <script src="js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 
 <header>
 
@@ -32,7 +34,7 @@
 
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
 
         <a href="index.html">ACCUEIL</a>
 
@@ -46,7 +48,7 @@
 
 </header>
 
-<main>
+<main id="main-content" tabindex="-1">
 
 
     <!-- =====================================================
@@ -92,8 +94,8 @@
 
         <div class="featured-article">
             <a href="articles/seanergy.html">
-                <img src="images/articles/seanergy/seanergy.png"
-                     alt="Mon premier salon professionnel : cap sur Seanergy">
+                <img src="images/articles/seanergy/seanergy.jpg"
+                     alt="Mon premier salon professionnel : cap sur Seanergy" width="2000" height="1500" fetchpriority="high" decoding="async">
 
                 <div class="featured-content">
                     <p class="article-category">ÉVÉNEMENT</p>
@@ -106,8 +108,8 @@
 
         <div class="article-grid">
             <a href="articles/DCOM.html" class="article-card">
-                <img src="images/articles/DCOM/dcom.png"
-                     alt="Christophe Colomb de la DCOM">
+                <img src="images/articles/DCOM/dcom.jpg"
+                     alt="Christophe Colomb de la DCOM" width="2000" height="1500" loading="lazy" decoding="async">
 
                 <div class="article-card-content">
                     <p class="article-category">DÉCOUVERTE</p>
@@ -117,8 +119,8 @@
             </a>
 
             <a href="articles/equipe.html" class="article-card">
-                <img src="images/articles/equipe/bike.png"
-                     alt="Le travail, c'est bien. L'équipe, c'est mieux.">
+                <img src="images/articles/equipe/bike.jpg"
+                     alt="Le travail, c'est bien. L'équipe, c'est mieux." width="2000" height="1500" loading="lazy" decoding="async">
 
                 <div class="article-card-content">
                     <p class="article-category">COULISSES</p>
@@ -130,8 +132,8 @@
 
         <div class="article-grid">
             <a href="articles/autorite-autonomie.html" class="article-card">
-                <img src="images/portfolio/quotidien/carnet.png"
-                     alt="Carnet de notes sur un bureau">
+                <img src="images/portfolio/quotidien/carnet.jpg"
+                     alt="Carnet de notes sur un bureau" width="2000" height="1500" loading="lazy" decoding="async">
 
                 <div class="article-card-content">
                     <p class="article-category">RÉFLEXION</p>
@@ -141,8 +143,8 @@
             </a>
 
             <a href="articles/derriere-le-logo.html" class="article-card">
-                <img src="images/portfolio/quotidien/facade.png"
-                     alt="Façade de l'Hôtel de Région des Pays de la Loire">
+                <img src="images/portfolio/quotidien/facade.jpg"
+                     alt="Façade de l'Hôtel de Région des Pays de la Loire" width="2000" height="1500" loading="lazy" decoding="async">
 
                 <div class="article-card-content">
                     <p class="article-category">DÉCOUVERTE</p>
@@ -155,8 +157,8 @@
         <div class="article-wide">
             <a href="articles/bilan.html">
                 <div class="article-wide-image">
-                    <img src="images/articles/bilan/bilan.png"
-                         alt="Réflexion après deux mois d'immersion">
+                    <img src="images/articles/bilan/bilan.jpg"
+                         alt="Réflexion après deux mois d'immersion" width="2000" height="1500" loading="lazy" decoding="async">
                 </div>
 
                 <div class="article-wide-content">
@@ -228,7 +230,7 @@
         </div>
 
 
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Navigation de pied de page">
 
             <a href="index.html">
                 Accueil

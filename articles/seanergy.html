@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mon premier salon professionnel : cap sur Seanergy — Chroniques Ligériennes</title>
+    <title>Mon premier salon professionnel : cap sur Seanergy | Chroniques Ligériennes</title>
 
     <meta name="theme-color" content="#090557">
     <link rel="icon" href="../images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="../css/atelier.css">
     <script src="../js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 
 <header>
 
@@ -31,7 +33,7 @@
 
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
 
         <a href="../index.html">ACCUEIL</a>
 
@@ -46,7 +48,7 @@
 </header>
 
 
-<main>
+<main id="main-content" tabindex="-1">
 
 
     <!-- =====================================================
@@ -121,11 +123,11 @@
 
     <div class="article-video">
 
-        <video controls playsinline>
+        <video controls playsinline preload="metadata" poster="../images/articles/seanergy/seanergy.jpg" aria-label="Vidéo du salon Seanergy">
 
             <source
-                src="../images/articles/seanergy/seanergy.mov"
-                type="video/quicktime">
+                src="../images/articles/seanergy/seanergy-web.mp4"
+                type="video/mp4">
 
             Votre navigateur ne peut pas lire cette vidéo.
 
@@ -226,9 +228,9 @@
 
                     <span class="timeline-dot"></span>
 
-                    <h3>
+                    <p class="timeline-title">
                         PRÉPARATION
-                    </h3>
+                    </p>
 
                     <p>
                         Plusieurs semaines<br>
@@ -242,9 +244,9 @@
 
                     <span class="timeline-dot"></span>
 
-                    <h3>
+                    <p class="timeline-title">
                         SALON
-                    </h3>
+                    </p>
 
                     <p>
                         <span class="article-fact">
@@ -261,9 +263,9 @@
 
                     <span class="timeline-dot"></span>
 
-                    <h3>
+                    <p class="timeline-title">
                         BILAN
-                    </h3>
+                    </p>
 
                     <p>
                         Après le salon<br>
@@ -403,7 +405,7 @@
 
         <h2 class="section-handmade">
 
-            J — 1
+            J - 1
             <span>
                 Les stands prennent vie
             </span>
@@ -737,8 +739,8 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/DCOM/dcom.png"
-                        alt="Christophe Colomb de la DCOM">
+                        src="../images/articles/DCOM/dcom.jpg"
+                        alt="Christophe Colomb de la DCOM" width="2000" height="1500" loading="lazy" decoding="async">
 
                 </div>
 
@@ -781,8 +783,8 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/equipe/bike.png"
-                        alt="Le travail, c'est bien. L'équipe, c'est mieux.">
+                        src="../images/articles/equipe/bike.jpg"
+                        alt="Le travail, c'est bien. L'équipe, c'est mieux." width="2000" height="1500" loading="lazy" decoding="async">
 
                 </div>
 
@@ -825,8 +827,8 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/bilan/bilan.png"
-                        alt="Réflexion après deux mois d'immersion">
+                        src="../images/articles/bilan/bilan.jpg"
+                        alt="Réflexion après deux mois d'immersion" width="2000" height="1500" loading="lazy" decoding="async">
 
                 </div>
 
@@ -902,7 +904,7 @@
         </div>
 
 
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Navigation de pied de page">
 
             <a href="../index.html">
                 Accueil

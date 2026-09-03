@@ -11,10 +11,12 @@
     <link rel="icon" href="../images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="../css/atelier.css">
     <script src="../js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 
 <header>
 
@@ -24,7 +26,7 @@
         <img src="../images/logos/logo-stage.png" alt="Logo Chroniques Ligériennes">
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
         <a href="../index.html">ACCUEIL</a>
         <a href="../about.html">À PROPOS</a>
         <a href="../articles.html">ARTICLES</a>
@@ -34,7 +36,7 @@
 </header>
 
 
-<main>
+<main id="main-content" tabindex="-1">
 
     <!-- =====================================================
          HERO
@@ -99,6 +101,10 @@
 
         </div>
 
+        <figure class="article-hero-media">
+            <img src="../images/articles/equipe/bike.jpg" alt="Sortie à vélo avec l’équipe pendant le stage" width="2000" height="1500" fetchpriority="high" decoding="async">
+        </figure>
+
     </section>
 
 
@@ -147,7 +153,7 @@
     </p>
 
     <div class="team-dialogue">
-        <p>— <em>« Euh… je n'en bois pas. »</em></p>
+        <p>- <em>« Euh… je n'en bois pas. »</em></p>
     </div>
 
     <p>
@@ -159,7 +165,7 @@
     </p>
 
     <div class="team-dialogue">
-        <p>— <em>« Allez, viens avec nous ! »</em></p>
+        <p>- <em>« Allez, viens avec nous ! »</em></p>
     </div>
 
 
@@ -485,7 +491,7 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/seanergy/seanergy.png"
+                        src="../images/articles/seanergy/seanergy.jpg"
                         alt="Mon premier salon professionnel : cap sur Seanergy">
 
                 </div>
@@ -523,7 +529,7 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/DCOM/dcom.png"
+                        src="../images/articles/DCOM/dcom.jpg"
                         alt="Christophe Colomb de la DCOM">
 
                 </div>
@@ -561,7 +567,7 @@
                 <div class="related-article-image">
 
                     <img
-                        src="../images/articles/bilan/bilan.png"
+                        src="../images/articles/bilan/bilan.jpg"
                         alt="Réflexion après deux mois d'immersion">
 
                 </div>
@@ -632,7 +638,7 @@
         </div>
 
 
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Navigation de pied de page">
 
             <a href="../index.html">
                 Accueil

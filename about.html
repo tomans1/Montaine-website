@@ -12,10 +12,12 @@
     <link rel="icon" href="images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/atelier.css">
     <script src="js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 
     <header>
     <div class="header-logos">
@@ -27,7 +29,7 @@
 </div>
 
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navigation principale">
     <a href="index.html">ACCUEIL</a>
     <a href="about.html">À PROPOS</a>
     <a href="articles.html">ARTICLES</a>
@@ -37,7 +39,7 @@
     </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
 
         <!-- INTRODUCTION -->
@@ -64,8 +66,8 @@
 
             <div class="about-photo">
 
-                <img src="images/moi/montaine.png"
-                     alt="Montaine">
+                <img src="images/moi/montaine.jpg"
+                     alt="Montaine Poincloux" width="2000" height="1500" fetchpriority="high" decoding="async">
 
             </div>
 
@@ -164,7 +166,7 @@
 
                 <div class="timeline-item">
 
-                    <span>2025 — 2026</span>
+                    <span>2025-2026</span>
 
                     <h3>
                         ISEFAC Bachelor
@@ -180,7 +182,7 @@
 
                 <div class="timeline-item">
 
-                    <span>Avril — Juin 2026</span>
+                    <span>Avril-Juin 2026</span>
 
                     <h3>
                         Région Pays de la Loire
@@ -256,7 +258,7 @@
             </div>
 
 
-            <nav class="footer-nav">
+            <nav class="footer-nav" aria-label="Navigation de pied de page">
 
                 <a href="index.html">
                     Accueil

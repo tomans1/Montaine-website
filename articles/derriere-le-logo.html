@@ -8,16 +8,18 @@
     <link rel="icon" href="../images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="../css/atelier.css">
     <script src="../js/site.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <header>
         <div class="header-logos">
             <img src="../images/logos/logo-ecole.png" alt="Logo ISEFAC Bachelor">
             <img src="../images/logos/logo-region.png" alt="Logo Région Pays de la Loire">
             <img src="../images/logos/logo-stage.png" alt="Logo Chroniques Ligériennes">
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navigation principale">
             <a href="../index.html">ACCUEIL</a>
             <a href="../about.html">À PROPOS</a>
             <a href="../articles.html">ARTICLES</a>
@@ -25,10 +27,10 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="article-hero">
             <div class="article-hero-text">
-                <p class="section-label">CHRONIQUE 06 — DÉCOUVERTE</p>
+                <p class="section-label">CHRONIQUE 06 - DÉCOUVERTE</p>
                 <h1>Derrière le logo</h1>
                 <div class="article-meta">
                     <strong>Montaine Poincloux</strong>
@@ -37,6 +39,10 @@
                 </div>
                 <div class="article-title-line"></div>
             </div>
+
+            <figure class="article-hero-media">
+                <img src="../images/portfolio/quotidien/facade.jpg" alt="Façade de l’Hôtel de Région des Pays de la Loire" width="2000" height="1500" fetchpriority="high" decoding="async">
+            </figure>
         </section>
 
         <article class="article-content">
@@ -70,7 +76,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-title"><h2>Chroniques Ligériennes</h2><p>Un stage, des projets, des découvertes.</p></div>
-            <nav class="footer-nav"><a href="../index.html">Accueil</a><a href="../about.html">À propos</a><a href="../articles.html">Articles</a><a href="../portfolio.html">Les coulisses</a></nav>
+            <nav class="footer-nav" aria-label="Navigation de pied de page"><a href="../index.html">Accueil</a><a href="../about.html">À propos</a><a href="../articles.html">Articles</a><a href="../portfolio.html">Les coulisses</a></nav>
         </div>
         <div class="footer-bottom"><p>© 2026 Montaine Poincloux</p></div>
     </footer>

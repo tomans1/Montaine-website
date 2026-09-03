@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chroniques Ligériennes</title>
-    <meta name="description" content="Chroniques Ligériennes — les coulisses d’un stage en production événementielle à la Région Pays de la Loire.">
+    <meta name="description" content="Chroniques Ligériennes : les coulisses d’un stage en production événementielle à la Région Pays de la Loire.">
     <meta name="theme-color" content="#090557">
     <link rel="icon" href="images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/premium.css">
+    <link rel="stylesheet" href="css/atelier.css">
     <script src="js/site.js" defer></script>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 <header>
     <div class="header-logos">
     <img src="images/logos/logo-ecole.png" alt="Logo ISEFAC Bachelor">
@@ -22,19 +24,19 @@
     <img src="images/logos/logo-stage.png" alt="Logo Chroniques Ligériennes">
 </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navigation principale">
     <a href="index.html">ACCUEIL</a>
     <a href="about.html">À PROPOS</a>
     <a href="articles.html">ARTICLES</a>
     <a href="portfolio.html">LES COULISSES</a>
 </nav>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 
     <section class="hero">
-         <img src="images/accueil/heros.png"
+         <img src="images/accueil/heros.jpg"
          alt="Les griffes de la Région Pays de la Loire"
-         class="hero-image">
+         class="hero-image" width="2000" height="1500" fetchpriority="high" decoding="async">
 
         <div class="hero-content">
             <h1>Chroniques Ligériennes</h1>
@@ -102,7 +104,7 @@
     </div>
 
     <div class="introduction-image">
-        <img src="images/moi/moi.JPG" alt="Montaine Poincloux">
+        <img src="images/moi/moi.JPG" alt="Montaine Poincloux" width="1170" height="2080" loading="lazy" decoding="async">
     </div>
 
 </section>
@@ -116,8 +118,8 @@
     <div class="featured-article">
 
         <a href="articles/seanergy.html">
-            <img src="images/articles/seanergy/seanergy.png"
-                 alt="Mon premier salon professionnel : cap sur Seanergy">
+            <img src="images/articles/seanergy/seanergy.jpg"
+                 alt="Mon premier salon professionnel : cap sur Seanergy" width="2000" height="1500" loading="lazy" decoding="async">
 
             <div class="featured-content">
                 <p class="article-category">ÉVÉNEMENT</p>
@@ -141,8 +143,8 @@
 
         <a href="articles/DCOM.html" class="article-card">
 
-            <img src="images/articles/DCOM/dcom.png"
-                 alt="Christophe Colomb de la DCOM">
+            <img src="images/articles/DCOM/dcom.jpg"
+                 alt="Christophe Colomb de la DCOM" width="2000" height="1500" loading="lazy" decoding="async">
 
             <div class="article-card-content">
                 <p class="article-category">DÉCOUVERTE</p>
@@ -155,8 +157,8 @@
 
         <a href="articles/equipe.html" class="article-card">
 
-            <img src="images/articles/equipe/bike.png"
-                 alt="Le travail, c'est bien. L'équipe, c'est mieux.">
+            <img src="images/articles/equipe/bike.jpg"
+                 alt="Le travail, c'est bien. L'équipe, c'est mieux." width="2000" height="1500" loading="lazy" decoding="async">
 
             <div class="article-card-content">
                 <p class="article-category">COULISSES</p>
@@ -174,8 +176,8 @@
         <a href="articles/bilan.html">
 
             <div class="article-wide-image">
-                <img src="images/articles/bilan/bilan.png"
-                     alt="Réflexion après deux mois d'immersion">
+                <img src="images/articles/bilan/bilan.jpg"
+                     alt="Réflexion après deux mois d'immersion" width="2000" height="1500" loading="lazy" decoding="async">
             </div>
 
             <div class="article-wide-content">
@@ -248,7 +250,7 @@
             <p>Un stage, des projets, des découvertes.</p>
         </div>
 
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Navigation de pied de page">
             <a href="index.html">Accueil</a>
             <a href="about.html">À propos</a>
             <a href="articles.html">Articles</a>

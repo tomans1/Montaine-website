@@ -9,16 +9,18 @@
     <link rel="icon" href="../images/logos/logo-stage.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/premium.css">
+    <link rel="stylesheet" href="../css/atelier.css">
     <script src="../js/site.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
     <header>
         <div class="header-logos">
             <img src="../images/logos/logo-ecole.png" alt="Logo ISEFAC Bachelor">
             <img src="../images/logos/logo-region.png" alt="Logo Région Pays de la Loire">
             <img src="../images/logos/logo-stage.png" alt="Logo Chroniques Ligériennes">
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navigation principale">
             <a href="../index.html">ACCUEIL</a>
             <a href="../about.html">À PROPOS</a>
             <a href="../articles.html">ARTICLES</a>
@@ -26,23 +28,28 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="article-hero">
             <div class="article-hero-text">
-                <p class="section-label">CHRONIQUE 05 — RÉFLEXION</p>
+                <p class="section-label">CHRONIQUE 05 - RÉFLEXION</p>
                 <h1>Autorité et autonomie</h1>
                 <div class="article-meta">
                     <strong>Montaine Poincloux</strong>
-                    <span class="meta-icon">◷</span>
-        <span>4 min de lecture</span>
-    </span>
-    <span class="article-meta-item">
-        <span class="meta-icon">▣</span>
-        <span>26 juin 2026</span>
-    </span>
+                    <span class="article-meta-item">
+                        <span class="meta-icon" aria-hidden="true">◷</span>
+                        <span>4 min de lecture</span>
+                    </span>
+                    <span class="article-meta-item">
+                        <span class="meta-icon" aria-hidden="true">▣</span>
+                        <span>26 juin 2026</span>
+                    </span>
                 </div>
                 <div class="article-title-line"></div>
             </div>
+
+            <figure class="article-hero-media">
+                <img src="../images/portfolio/quotidien/carnet.jpg" alt="Carnet de notes ouvert sur un bureau" width="2000" height="1500" fetchpriority="high" decoding="async">
+            </figure>
         </section>
 
         <article class="article-content authority-article">
@@ -86,27 +93,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-title"><h2>Chroniques Ligériennes</h2><p>Un stage, des projets, des découvertes.</p></div>
-            <nav class="footer-nav"><a href="../index.html">Accueil</a><a href="../about.html">À propos</a><a href="../articles.html">Articles</a><a href="../portfolio.html">Les coulisses</a></nav>
+            <nav class="footer-nav" aria-label="Navigation de pied de page"><a href="../index.html">Accueil</a><a href="../about.html">À propos</a><a href="../articles.html">Articles</a><a href="../portfolio.html">Les coulisses</a></nav>
         </div>
         <div class="footer-bottom"><p>© 2026 Montaine Poincloux</p></div>
     </footer>
-    <script>
-        const revealedElements = document.querySelectorAll('.reveal-on-scroll');
-
-        if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            revealedElements.forEach((element) => revealObserver.observe(element));
-        } else {
-            revealedElements.forEach((element) => element.classList.add('is-visible'));
-        }
-    </script>
 </body>
 </html>
